@@ -165,7 +165,7 @@ public class OurWebSite {
 		Thread.sleep(1000);
 		
 	}
-	//@Test(priority=8)
+	@Test(priority=8)
 	public void FruitsDropDownBoxTesting(){
 		List<WebElement>FruitList=driver.findElement(By.xpath(".//*[@id='form5']/select[1]")).findElements(By.tagName("option"));
 		int TotalFruits=FruitList.size()-1;
@@ -173,12 +173,12 @@ public class OurWebSite {
 		for(int i=1; i<FruitList.size(); i++){
 			System.out.println(i+". "+FruitList.get(i).getText());
 		}
-		Assert.assertEquals(TotalFruits, 4);
+		Assert.assertEquals(TotalFruits, 5);
 		
 		Select FruitSelect=new Select(driver.findElement(By.xpath(".//*[@id='form5']/select[1]")));
 		FruitSelect.selectByIndex(2);
 	}
-	//@Test(priority=9)
+	@Test(priority=9)
 	public void MonthDropDownBoxTesting() throws InterruptedException{
 		List<WebElement>MonthList=driver.findElement(By.xpath(".//*[@id='form5']/select[2]")).findElements(By.tagName("option"));
 		int TotalMonth=MonthList.size()-1;
@@ -191,7 +191,7 @@ public class OurWebSite {
 		Select MonthSelect=new Select(driver.findElement(By.xpath(".//*[@id='form5']/select[2]")));
 		MonthSelect.selectByVisibleText("June");
 	}
-	//@Test(priority=10)
+	@Test(priority=10)
 	public void DayDropDownBoxTesting() throws InterruptedException{
 		List<WebElement>DayList=driver.findElement(By.xpath(".//*[@id='form5']/select[3]")).findElements(By.tagName("option"));
 		int TotalDay=DayList.size()-1;
@@ -211,8 +211,7 @@ public class OurWebSite {
 		
 		Actions act=new Actions(driver);
 		act.moveToElement(CopyText).doubleClick().perform();
-		act.clickAndHold();
-	    act.clickAndHold(CopyText).build().perform();
+		
 		
 		String ActualResult=driver.findElement(By.xpath(".//*[@id='field2']")).getAttribute("value");
 		Assert.assertEquals(ActualResult, "Hello World!");
