@@ -86,7 +86,7 @@ public class OurWebSite {
 		alt3.accept();
 		Assert.assertEquals(driver.findElement(By.xpath(".//*[@id='output']")).getText(), "Selenium");
 	}
-	@Test(priority=4)
+	//@Test(priority=4)
 	public void SubMenuHandlingAndNewWindowTitleVerify() throws InterruptedException{
 		
 		WebElement socialMedia=driver.findElement(By.linkText("Social Media"));
