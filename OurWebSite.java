@@ -113,7 +113,7 @@ public class OurWebSite {
 		System.out.println("2nd Window Title is :"+actualNewWindowTitle);
 	
 		driver.findElement(By.name("q")).sendKeys("Selenium WebDriver");
-		driver.findElement(By.name("btnG")).click();
+		/*driver.findElement(By.name("btnG")).click();
 		driver.findElement(By.partialLinkText("Selenium WebDriver")).click();
 		
 		System.out.println("3rd Window Title is : "+driver.getTitle());
@@ -122,10 +122,11 @@ public class OurWebSite {
 		System.out.println("4th Window Title is : "+driver.getTitle());
 		Assert.assertEquals(driver.getTitle(), "Selenium WebDriver");
 		
-		driver.close();
+		
 		
 		driver.switchTo().window(Parent_Window);
-		
+		*/
+		driver.close();
 	}
 	@Test(priority=5)
 	public void TextBoxTestingAndTextVerify() throws InterruptedException{
