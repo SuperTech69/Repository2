@@ -123,10 +123,11 @@ public class OurWebSite {
 		Assert.assertEquals(driver.getTitle(), "Selenium WebDriver");
 		
 		
-		
-		driver.switchTo().window(Parent_Window);
 		*/
 		driver.close();
+		driver.switchTo().window(Parent_Window);
+		
+		
 	}
 	@Test(priority=5)
 	public void TextBoxTestingAndTextVerify() throws InterruptedException{
